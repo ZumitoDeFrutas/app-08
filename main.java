@@ -1,4 +1,5 @@
 import java.util.*;
+import javax.swing.JOptionPane;
 
 public class main {
 
@@ -7,7 +8,7 @@ public class main {
         Scanner sc = new Scanner(System.in);
 
         String nombre;
-        double salario;
+        double salario = 600;
         int option;
 
         System.out.println("******************************");
@@ -16,19 +17,30 @@ public class main {
         System.out.println("3. administrativo \n");
 
         System.out.println("Ingresa una opcion: ");
-        ocion = sc.nextInt();
+        option = sc.nextInt();
 
         switch(option) {
             case 1:
+                salario = salario + (salario*0.25);
+                break;
 
             case 2:
 
             case 3:
 
+            default:
+
+                System.out.println("Opcion Invalida");
 
         }
 
+        JOptionPane.showMessageDialog(null, "El salario es: " + salario);
 
+        System.out.println(
+                "──────▄▀▄─────▄▀▄\n" +
+                "─────▄█░░▀▀▀▀▀░░█▄\n" +
+                "─▄▄──█░░░░░░░░░░░█──▄▄\n" +
+                "█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█");
 
     }
 
